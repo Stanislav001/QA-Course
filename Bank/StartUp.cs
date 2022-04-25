@@ -33,7 +33,6 @@ namespace Bank
                 Console.WriteLine("You don't have enough money");
                 return;
             }
-
             Console.WriteLine($"You have successfully withdraw {withdrawMoney}$");
         }   
     }
