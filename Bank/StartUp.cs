@@ -17,7 +17,8 @@ namespace Bank
             }
 
             balance += depositMoney;
-            Console.WriteLine($"You have successfully added {depositMoney}");
+            Console.WriteLine(balance);
+            Console.WriteLine($"You have successfully added {depositMoney}$");
 
             Console.WriteLine("Enter how much money you want to withdraw: ");
             decimal withdrawMoney = decimal.Parse(Console.ReadLine());
@@ -26,8 +27,14 @@ namespace Bank
             {
                 Console.WriteLine("You withdraw be add negative money");
             }
+            
+            if (withdrawMoney > balance)
+            {
+                Console.WriteLine("You don't have enough money");
+                return;
+            }
 
-            Console.WriteLine($"You have successfully withdraw {withdrawMoney}");
+            Console.WriteLine($"You have successfully withdraw {withdrawMoney}$");
         }   
     }
 }
